@@ -1,0 +1,117 @@
+/* We still need to: 
+1- add style to the svg
+3- mobile and other screen media queries */
+:root {
+  --first-color: #e38826;
+  --second-color: #006970;
+  --third-color: #004241;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Responsive start*/
+@media (max-width: 375px) {
+  .cards {
+    width: 160px;
+    height: 300px;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .sedan,
+  .suv,
+  .luxury {
+    width: 350px;
+    height: fit-content;
+  }
+}
+/* Responsive End*/
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 875px;
+  height: 420px;
+  margin: 6% 15% 8%;
+}
+
+.sedan {
+  background-color: var(--first-color);
+}
+
+.suv {
+  background-color: var(--second-color);
+}
+
+.luxury {
+  background-color: var(--third-color);
+}
+
+.icon {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: whitesmoke;
+  font-size: 36px;
+  text-transform: uppercase;
+  padding: 0 10px 0 30px;
+}
+
+p {
+  padding: 10px 10px 0 30px;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 30px;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.btn-lux,
+.btn-sedan,
+.btn-suv {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 60px 30px 50px;
+  border: 2px solid white;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  color: inherit;
+  background-color: white;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.btn-sedan:hover,
+.btn-lux:hover,
+.btn-suv:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-sedan {
+  color: var(--first-color);
+}
+
+.btn-suv {
+  color: var(--second-color);
+}
+
+.btn-lux {
+  color: var(--third-color);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
